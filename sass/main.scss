@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
+
+@import 'abstract/variables';
+@import 'abstract/functions';
+@import 'abstract/mixins';
+
+@import 'base/animations';
+@import 'base/base';
+@import 'base/typography';
+@import 'base/utilities';
+
+@import 'components/buttons';
+@import 'components/composition';
+@import 'components/feature-box';
+@import 'components/product';
+
+@import 'layout/grid';
+@import 'layout/header';
+@import 'layout/navigation';
+@import 'layout/responsive';
+@import 'layout/footer';
+@import 'layout/checkout';
+
+@import 'pages/home';
+@import 'pages/about';
+@import 'pages/omega3';
+@import 'pages/vitamins';
+@import 'pages/dha';
+@import 'pages/history';
+@import 'pages/products';
+@import 'pages/country';
+@import 'pages/faq';
+@import 'pages/contact';
+@import 'pages/details';
+@import 'pages/shop';
+@import 'pages/shop_product';
+@import 'pages/cart';
+@import 'pages/admin_form';
+@import 'pages/panel';
+@import 'pages/crud_forms';
+
+
+
+

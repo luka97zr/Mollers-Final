@@ -1,0 +1,92 @@
+.admin_form--wrapper{
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    min-width: 650px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 50%;
+        & form{
+            width: 50%;
+            margin:0 auto;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+                & input[type=text], input[type=password]{
+                    width: 70%;
+                    margin-bottom: 3rem;
+                    border: 1px solid $color-green-nav-btn;
+                    padding: 1rem;
+                        &:focus{
+                            outline: 1px solid $color-green-nav-btn;
+
+                        }
+                }
+                & > a{
+                    color: lighten(#000 , 35%);
+                    font-size: 1.7rem;
+                    margin-top: 1.5rem;
+                    transition: all .5s;
+                        &:hover{
+                            text-decoration: underline;
+                            color: #000;
+                        }
+                }
+                & input[type=submit]{
+                    @include crud_btn($color-green-nav-btn);
+                    color: $color-white;
+                    font-size: 1.7rem;
+                    font-weight: 700;
+                    margin:0 auto;
+                    border: none;
+                    cursor: pointer;
+                }
+        }
+      & p{
+          padding-top: 3rem;
+          color: red;
+      }
+        
+
+}
+a#back_home_admin{
+    @include crud_btn($color-green-nav-btn);
+    margin-left: 5rem;
+}
+
+//Reset pwd form
+.reset_pwd--wrapper{
+    text-align: center;
+    & form{
+        width: 40%;
+        margin: 10rem auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+            & h3{
+                margin-bottom: 1rem;
+                font-size: 3rem;
+            }
+            & input{
+                width: 60%;
+                margin-top: 2rem;
+                padding: .6rem 1rem;
+                border-radius: 5px;
+                outline: none;
+                    &[type=submit]{
+                        border: none;
+                        background-color: $color-green-nav-btn;
+                        font-weight: 700;
+                        color: $color-white;
+                        cursor: pointer;
+                        margin-bottom: 3rem;
+                    }
+                  
+                
+               
+            }
+    }
+}
+p#reset_msg{
+    font-weight: 600;
+}

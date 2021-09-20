@@ -1,0 +1,73 @@
+//Section 1 - dha infocards
+
+.dha_infocard{
+    &--row{
+        display: flex;
+        align-items: center;
+        height: 49rem;
+            &:not(:last-child){
+            margin-bottom: 10%;
+            }
+            & > div{
+                flex:1;
+               
+            }
+            
+           
+    }
+}
+.dha_row{
+
+    &--content{
+    background-color: $color-home-products-background;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+        & > div{
+            width: 75%;
+            max-width: 750px;
+            margin: 0 auto;
+            padding-left: 2em;
+            
+                & h3{
+                color:$card-text-color-black;
+                font-weight: 400;
+                @include fluid-type (320px,1960px,20px,28px);
+                }
+                & span.desc{
+                    color: $card-text-color-green;
+                    display: inline-block;
+                    font-weight: 600;
+                    @include fluid-type (320px,1960px,12px,14px);
+                    padding-bottom: 2.5rem;
+                }
+                & p{
+                    font-weight: 400;
+                    @include fluid-type (320px,1960px,12px,14px);
+                    &:not(:last-child){
+                        padding-bottom: 2rem;
+                    }
+                        & span.bold{
+                            font-weight: bold;
+                        }
+                }
+        }
+    }
+       
+    &--img{
+        &1{
+            background: url('../Design/dha/img1.png') no-repeat center / cover;
+            height: 49rem;
+            width: 100%;
+        }
+        &2{
+            background: url('../Design/dha/img2.png') no-repeat center / cover;
+            height: 49rem;
+            width: 100%;
+
+        }
+    }
+    
+}

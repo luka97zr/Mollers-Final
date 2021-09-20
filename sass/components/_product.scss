@@ -1,0 +1,26 @@
+.shop_products{
+    line-height: 1.9rem;
+    width:18%;
+    min-width: 27rem;
+    max-height: 45rem;
+    text-align: center;
+    margin-bottom: 8rem;
+    margin-right: 5%;
+    
+
+    &--img{
+        height: 29rem;
+
+    }
+    & h1{
+        color: $card-text-color-black;
+        font-weight: 600;
+        font-size: 2.1rem;
+        margin-bottom: 1em;
+    }
+    & p{
+        font-weight: 600;
+        color:$color-green-nav-btn;
+        font-size: 1.4rem;
+    }
+}

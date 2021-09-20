@@ -1,0 +1,81 @@
+.section_faq{
+    display: flex;
+    justify-content: space-between;
+}
+.faq_aside{
+    flex:1.3;
+    background: url('../Design/faq/aside.png') no-repeat center / cover;
+    height: auto;
+    max-width: 1000px;
+    
+}
+.faq_content{
+    color: $li-color-black;
+    max-width: 1000px;
+    &--wrapper{
+        flex:2;
+        margin:0 7% 0 5%;
+        padding-top: 7rem;
+        min-width: 250px;
+        
+    }
+    &--header{
+        max-width: 850px;
+        margin-bottom:6rem;
+        & h1{
+            padding: 6rem 0 9rem 0;
+            font-weight: 400;
+            @include fluid-type (320px,1960px,23px,48px);
+
+        }
+        & p{
+            font-weight: 400;
+            @include fluid-type (320px,1960px,14px,21px);
+
+        }
+    }
+}
+div.accordion{
+    position: relative;
+    background-color: transparent;
+    color: $li-color-black;
+    cursor: pointer;
+    padding: 2.3rem 2rem 2.3rem 0;
+    width: 100%;
+    border-top: 1px solid $faq-border;
+    text-align: left;
+    outline: none;
+    font-weight: 600;
+    @include fluid-type (320px,1960px,14px,18px);
+    transition: 0.4s;
+        &::after{
+            position: absolute;
+            content: url('../Design/faq/arrowDown.png');
+            float: right;
+            top:50%;
+            right: 0;
+            transform: translateY(-50%);
+
+        }
+        &.open::after{     
+            position: absolute;
+            content: url('../Design/faq/arrowUp.png');
+            float: right;
+        }
+}
+.panel {
+    padding: 0 1.8rem;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    font-size: 1.4rem;
+        & p{
+            padding: 3rem 0;
+        }
+        &:last-of-type{
+            border-bottom: 1px solid $faq-border;
+
+        }
+  }
+  

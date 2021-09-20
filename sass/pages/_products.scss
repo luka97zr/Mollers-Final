@@ -1,0 +1,43 @@
+//Section 1 - info row
+.products_info{
+    background-color:$color-home-products-background;
+    &--row{
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 8% 0 ;
+        & > div{
+            min-width: 300px;
+            flex: 1;
+           padding:0 3%;
+                & p{
+                    font-weight: 400;
+                    font-size: 1.4rem;
+                    line-height: 1.9rem;
+                }       
+    
+        }
+    }
+    
+    &--col1 p#bold{
+        color:$color-green-nav-btn;
+        font-weight: 600;
+    }
+}
+
+//Section 2 - all products
+.products_all_products{
+    background-color: $color-home-products-background;
+}
+.all_products--wrapper{
+    padding:5% 0;
+    width: 80%;
+    margin-left: 20%;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}

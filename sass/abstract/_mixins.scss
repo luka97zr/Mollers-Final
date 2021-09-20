@@ -1,0 +1,60 @@
+@mixin  clearfix {
+    &::after{
+        content: "";
+        clear: both;
+        display: table;
+    }
+    
+}
+@mixin yellow_btn($margin){
+    display: inline-block;
+    background-color: $card-btn-bg;
+    text-align: center;
+    font-size: 1.6rem;
+    color: $card-btn-txt;
+    padding: .9rem 1.6rem;
+    margin-bottom: $margin;
+}
+
+@mixin green_btn($padding1,$padding2){
+    text-align: center;
+    display: inline-block;
+    padding:$padding1 $padding2;
+    margin-top:7%;
+    background-color:$color-green-nav-btn;
+    font-size: 1.6rem;
+}
+@mixin crud_btn($color){
+    display: inline-block;
+    text-align: center;
+    font-weight: 600;
+    background-color: $color;  
+    width: 16rem;
+    height: 4rem;
+    line-height: 4rem;
+    margin: 3.5rem 0;           
+    border-radius: 5px;
+}
+
+@function strip-unit($value) {
+    @return $value / ($value * 0 + 1);
+  }
+  
+  @mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+    $u1: unit($min-vw);
+    $u2: unit($max-vw);
+    $u3: unit($min-font-size);
+    $u4: unit($max-font-size);
+  
+    @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+      & {
+        font-size: $min-font-size;
+        @media screen and (min-width: $min-vw) {
+          font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+        }
+        @media screen and (min-width: $max-vw) {
+          font-size: $max-font-size;
+        }
+      }
+    }
+  }
